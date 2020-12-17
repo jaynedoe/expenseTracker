@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-lg-4">
         <input
-          class="form-control input"
+          class="form-control input font"
           type="text"
           name="title"
           placeholder="Enter item description...."
@@ -17,18 +17,21 @@
       </div>
 
       <div class="col-lg-4">
-        <select class="form-control input text-muted" name="category">
-          <option value="0">Choose category...</option>
-          <option value="Groceries">Groceries</option>
-          <option value="Bills">Bills</option>
-          <option value="Transport">Transport</option>
-          <option value="Fun">Fun</option>
+        <select id="select-category" class="form-control input text-muted" name="category">
+          <optgroup>
+            <option class="font" value="0">Choose category...</option>
+            <option class="font" value="Groceries">Groceries</option>
+            <option class="font" value="Bills">Bills</option>
+            <option class="font" value="Transport">Transport</option>
+            <option class="font" value="Fun">Fun</option>
+          </optgroup>
+
         </select>
       </div>
 
       <div class="col-lg-4">
         <input
-          class="form-control input"
+          class="form-control input font"
           type="number"
           name="amount"
           placeholder="Amount..."
@@ -56,15 +59,15 @@
               <th>Description</th>
               <th>Category</th>
               <th>Amount</th>
-              <!-- <th>Delete?</th> -->
+              <th>Delete?</th>
             </tr>
         
             <% for(let i = 0; i < items.length; i++){ %>
             <tr>
               <td><%= items[i].title %></td>
               <td><%= items[i].category %></td>
-              <td><%= items[i].amount %></td>
-              <!-- <td><input class="form-check-input ml-2" type="checkbox" /></td> -->
+              <td>$<%= items[i].amount %></td>
+              <td><input class="form-check-input ml-2" type="checkbox" /></td>
             </tr>
             <% } %>
           </table>
@@ -72,22 +75,21 @@
           <button class="btn btn-lg btn-dark mt-5" type="submit" id="delete-check">
             -
           </button>
+          <a href="/dashboard"><button id="metrics-btn" class="btn btn-lg btn-dark mt-5">Go to Metrics Dashboard</button></a>
     </div>
     <div class="col-lg-4">
-
-        <a href="/dashboard"><button class="btn btn-dark">Expense Metrics</button></a>
 
     </div>
   </div>
 
 
 </div>
-<!-- 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
   $("#delete-check").on("click", function () {
     $("#expense-table tr").filter(":has(:checkbox:checked)").remove();
   });
-</script> -->
+</script>
 
 <%- include('footer') -%>
