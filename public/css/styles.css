@@ -1,0 +1,48 @@
+html{
+    min-height: 1000px;
+}
+
+body{
+    background-color: #08d9d6;
+    color: #252a34;
+    text-align: left;
+}
+
+table {
+    background-color: #eaeaea;
+    box-shadow: black;
+}
+
+p {
+    color: #eaeaea;
+}
+
+a {
+    color: #ff2e63;
+}
+
+a:hover {
+    color:#08d9d6;
+}
+
+footer{
+    background-color: #252a34;
+    color: #eaeaea;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.container {
+    padding: 2%;
+}
+
+.box {
+    background-color: #ff2e63;
+    border-radius: 1%;
+    margin: 50px;
+    padding: 5%;
+}
+
+.input {
+    height: 50px;
+}

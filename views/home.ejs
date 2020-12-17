@@ -1,0 +1,93 @@
+<%- include('header') -%>
+
+<h1 class="display-1 mt-4 mb-4">$Expense Tracker$</h1>
+
+<div class="box">
+  <h3 class="display-6 mb-5">Add expenses</h3>
+
+  <form action="/" method="POST">
+    <div class="row">
+      <div class="col-lg-4">
+        <input
+          class="form-control input"
+          type="text"
+          name="title"
+          placeholder="Enter item description...."
+        />
+      </div>
+
+      <div class="col-lg-4">
+        <select class="form-control input text-muted" name="category">
+          <option value="0">Choose category...</option>
+          <option value="Groceries">Groceries</option>
+          <option value="Bills">Bills</option>
+          <option value="Transport">Transport</option>
+          <option value="Fun">Fun</option>
+        </select>
+      </div>
+
+      <div class="col-lg-4">
+        <input
+          class="form-control input"
+          type="number"
+          name="amount"
+          placeholder="Amount..."
+        />
+      </div>
+    </div>
+    <button
+      class="btn btn-lg btn-dark mt-5"
+      type="submit"
+      name="add"
+      value="toBeAdded"
+    >
+      +
+    </button>
+  </form>
+</div>
+
+<div class="box">
+  <h3 class="display-6 mb-5">Show expenses</h3>
+
+  <div class="row">
+    <div class="col-lg-8">
+        <table id="expense-table" class="table table-hover text-muted">
+            <tr>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <!-- <th>Delete?</th> -->
+            </tr>
+        
+            <% for(let i = 0; i < items.length; i++){ %>
+            <tr>
+              <td><%= items[i].title %></td>
+              <td><%= items[i].category %></td>
+              <td><%= items[i].amount %></td>
+              <!-- <td><input class="form-check-input ml-2" type="checkbox" /></td> -->
+            </tr>
+            <% } %>
+          </table>
+        
+          <button class="btn btn-lg btn-dark mt-5" type="submit" id="delete-check">
+            -
+          </button>
+    </div>
+    <div class="col-lg-4">
+
+        <a href="/dashboard"><button class="btn btn-dark">Expense Metrics</button></a>
+
+    </div>
+  </div>
+
+
+</div>
+<!-- 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $("#delete-check").on("click", function () {
+    $("#expense-table tr").filter(":has(:checkbox:checked)").remove();
+  });
+</script> -->
+
+<%- include('footer') -%>
