@@ -8,9 +8,14 @@ body{
     text-align: left;
 }
 
+h1 {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 table {
     background-color: #eaeaea;
-    box-shadow: black;
+    font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -25,11 +30,16 @@ a:hover {
     color:#08d9d6;
 }
 
+button, optgroup {
+    font-family: 'Roboto', sans-serif;
+}
+
 footer{
     background-color: #252a34;
     color: #eaeaea;
     padding-top: 5%;
     padding-bottom: 5%;
+    text-align: center;
 }
 
 .container {
@@ -39,10 +49,20 @@ footer{
 .box {
     background-color: #ff2e63;
     border-radius: 1%;
-    margin: 50px;
-    padding: 5%;
+    margin: 5%;
+    padding: 3%;
 }
 
 .input {
     height: 50px;
+}
+
+.font::placeholder, #select-category{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+
+#metrics-btn {
+    float: right;
 }
