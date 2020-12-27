@@ -2,4 +2,4 @@
 Track and categorise expenses
 
 
-[!Home Page](expenseTracker1.png)
+[![expenseTracker 1](expenseTracker1.png)]
