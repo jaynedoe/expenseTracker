@@ -3,7 +3,7 @@ html{
 }
 
 body{
-    background-color: #08d9d6;
+    background-color: #63cff7;
     color: #252a34;
     text-align: left;
 }
@@ -13,9 +13,13 @@ h1 {
     padding-right: 5%;
 }
 
+h3{
+    color: #eaeaea;
+}
+
 table {
     background-color: #eaeaea;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 p {
@@ -27,7 +31,7 @@ a {
 }
 
 a:hover {
-    color:#08d9d6;
+    color:#63cff7;
 }
 
 button, optgroup {
@@ -42,6 +46,10 @@ footer{
     text-align: center;
 }
 
+.col{
+    padding: 0%;
+}
+
 .container {
     padding: 2%;
 }
@@ -53,6 +61,14 @@ footer{
     padding: 3%;
 }
 
+.middle-box {
+    background-color: #252a34;
+    color: #eaeaea;
+    border-radius: 1%;
+    margin: 6%;
+    padding: 4%;
+}
+
 .input {
     height: 50px;
 }
@@ -62,6 +78,10 @@ footer{
     font-size: 14px;
 }
 
+.middle-dash{
+    padding-left: 3%; 
+    padding-right: 3%;
+}
 
 #metrics-btn {
     float: right;
