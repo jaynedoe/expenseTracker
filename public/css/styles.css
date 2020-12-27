@@ -19,7 +19,7 @@ h3{
 
 table {
     background-color: #eaeaea;
-    /* font-family: 'Roboto', sans-serif; */
+    font-size: 1.1rem;
 }
 
 p {
@@ -83,6 +83,3 @@ footer{
     padding-right: 3%;
 }
 
-#metrics-btn {
-    float: right;
-}
